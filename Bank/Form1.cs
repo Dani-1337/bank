@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bank_Data.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bank_Data.Context;
+using Bank_Business;
 
 namespace Bank
 {
@@ -16,5 +19,5 @@ namespace Bank
         {
             InitializeComponent();
         }
-    }
+	}
 }

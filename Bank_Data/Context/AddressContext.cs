@@ -11,7 +11,7 @@ namespace Bank_Data.Context
 {
     public class AddressContext : DbContext
     {
-        public DbSet<Address> addresses;
+        public DbSet<Address> _addresses { get; set; }
 
         public AddressContext() : base("Data Source=.;Initial Catalog=Bank;Integrated Security=True")
         {

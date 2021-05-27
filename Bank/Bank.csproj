@@ -66,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -88,6 +91,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bank_Business\Bank_Business.csproj">
+      <Project>{18D5A5AC-8447-4A26-8F9F-85206ED0A555}</Project>
+      <Name>Bank_Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bank_Data\Bank_Data.csproj">
+      <Project>{61C1B605-1ADB-49A0-AC88-9964CB734458}</Project>
+      <Name>Bank_Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

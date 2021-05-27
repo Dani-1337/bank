@@ -8,11 +8,12 @@ namespace Bank_Data.Model
 {
     public class Address
     {
-        public string city;
-        public string country;
-        public string street;
-        public string neighborhood;
-        public int block;
-        public int floor;
+        public int Id { get; set; }
+        public int Block { get; set; }
+        public int Floor { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
+        public string Neighborhood { get; set; }
+        public string Street { get; set; }
     }
 }
