@@ -1,0 +1,14 @@
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank.exe.config
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank.exe
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank.pdb
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\EntityFramework.dll
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\EntityFramework.xml
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\obj\Debug\Bank.csprojAssemblyReference.cache
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\obj\Debug\Bank.Properties.Resources.resources
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\obj\Debug\Bank.csproj.GenerateResource.cache
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\obj\Debug\Bank.csproj.CopyComplete
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\obj\Debug\Bank.exe
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\obj\Debug\Bank.pdb
