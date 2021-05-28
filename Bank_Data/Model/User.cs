@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Data.Model
 {
-    public class User
+    public class User : BaseModel
     {
         public enum Gender
 		{
@@ -14,7 +14,6 @@ namespace Bank_Data.Model
             Female = 1
 		}
 
-        public int Id { get; set; }
         public int Age { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }

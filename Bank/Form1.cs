@@ -19,5 +19,23 @@ namespace Bank
         {
             InitializeComponent();
         }
-	}
+        AddressBusiness adrb = new AddressBusiness();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var random = new Random();
+            Address adr = new Address();
+            adr.Block = random.Next(0, 1000);
+            adr.Street = "Street #" + random.Next(0, 1000).ToString();
+            adr.Neighborhood = "Geto #" + random.Next(0, 1000).ToString();
+            adr.Country = "palatka #" + random.Next(0, 1000).ToString();
+            adr.Floor = random.Next(0, 10);
+
+            adrb.Add(adr);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label1.Text = string.Join("\n", adrb.GetAll().Select(ex => $"{ex.Block} {ex.Street} {ex.Neighborhood} {ex.Country} {ex.Floor}"));
+        }
+    }
 }

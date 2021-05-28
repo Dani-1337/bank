@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bank_Data.Model
 {
-    public class Address
+    public class Address : BaseModel
     {
-        public int Id { get; set; }
         public int Block { get; set; }
         public int Floor { get; set; }
         public string Country { get; set; }

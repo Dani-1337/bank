@@ -33,3 +33,10 @@ D:\Desktop\BankProject\Bank\bin\Debug\Bank_Business.pdb
 D:\Desktop\BankProject\Bank\bin\Debug\Bank_Business.dll.config
 D:\Desktop\BankProject\Bank\bin\Debug\Bank_Data.pdb
 D:\Desktop\BankProject\Bank\bin\Debug\Bank_Data.dll.config
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\obj\Debug\Bank.Form1.resources
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Business.dll
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Data.dll
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Business.pdb
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Business.dll.config
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Data.pdb
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Data.dll.config

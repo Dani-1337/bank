@@ -10,3 +10,15 @@ D:\Desktop\BankProject\Bank_Data\obj\Debug\Bank_Data.csproj.CoreCompileInputs.ca
 D:\Desktop\BankProject\Bank_Data\obj\Debug\Bank_Data.csproj.CopyComplete
 D:\Desktop\BankProject\Bank_Data\obj\Debug\Bank_Data.dll
 D:\Desktop\BankProject\Bank_Data\obj\Debug\Bank_Data.pdb
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\bin\Debug\Bank_Data.dll.config
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\bin\Debug\Bank_Data.dll
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\bin\Debug\Bank_Data.pdb
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\bin\Debug\EntityFramework.dll
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\bin\Debug\EntityFramework.xml
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.csprojAssemblyReference.cache
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.csproj.CoreCompileInputs.cache
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.csproj.CopyComplete
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.dll
+C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.pdb
