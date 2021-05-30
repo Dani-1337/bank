@@ -1,4 +1,5 @@
-﻿using Bank_Data.Model;
+﻿using Bank_Data.Attributes;
+using Bank_Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,6 +11,7 @@ namespace Bank_Data.Context
 {
     public class UserContext : DbContext
     {
+		[LocalDbSetAttr]
 		public DbSet<User> _users { get; set; }
 
 		public UserContext() : base("Data Source=.;Initial Catalog=Bank;Integrated Security=True")

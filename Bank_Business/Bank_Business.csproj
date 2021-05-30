@@ -55,6 +55,7 @@
     <Compile Include="BaseBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserBusiness.cs" />
+    <Compile Include="Exceptions\InvalidClassImplementationException.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bank_Data\Bank_Data.csproj">

@@ -1,8 +1,11 @@
-﻿using Bank_Data.Model;
+﻿using Bank_Business.Exceptions;
+using Bank_Data.Attributes;
+using Bank_Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,20 +13,21 @@ namespace Bank_Business
 {
     public class BaseBusiness<T, TContext> where TContext : DbContext where T : class
     {
-        /// <summary>
+		/// <summary>
 		/// Get all objects in the database
 		/// </summary>
 		/// <returns>All the objects in the database</returns>
+		/// <exception cref="InvalidClassImplementationException">Throws when the calling method's class was poorly written and missing LocalDbSetAttr attribute</exception>
 		public virtual List<T> GetAll()
         {
             using (TContext context = (TContext)Activator.CreateInstance(typeof(TContext)))
             {
-                foreach (var finfo in typeof(TContext).GetFields().Where(f => f.IsPublic && f.FieldType == typeof(DbSet<T>)))
+				foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
                 {
                     return ((DbSet<T>)(finfo.GetValue(context))).ToList();
                 }
 
-                return null; // Should be never hit if the context class is properly written
+				throw new InvalidClassImplementationException("Calling method was written poorly, missing LocalDbSetAttr attribute!");
             }
         }
 
@@ -32,16 +36,17 @@ namespace Bank_Business
 		/// </summary>
 		/// <param name="id">The id to find</param>
 		/// <returns>Object with <b>id</b> as its id</returns>
+		/// <exception cref="InvalidClassImplementationException">Throws when the calling method's class was poorly written and missing LocalDbSetAttr attribute</exception>
 		public virtual T GetId(int id)
         {
             using (TContext context = (TContext)Activator.CreateInstance(typeof(TContext)))
             {
-                foreach (var finfo in typeof(TContext).GetFields().Where(f => f.IsPublic && f.FieldType == typeof(DbSet<T>)))
+                foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
                 {
                     return ((DbSet<T>)(finfo.GetValue(context))).Single(e => (int)typeof(T).GetField("Id").GetValue(e) == id);
                 }
 
-                return null; // Should be never hit if the context class is properly written
+                throw new InvalidClassImplementationException("Calling method was written poorly, missing LocalDbSetAttr attribute!");
             }
         }
 
@@ -50,18 +55,19 @@ namespace Bank_Business
 		/// </summary>
 		/// <param name="filter">Filter to use <b><i>(lambda/delegate can be used)</i></b></param>
 		/// <returns>Object matching the <b>filter</b><br/> Null if not found or the <b>filter</b> throws ArgumentNullException</returns>
+		/// <exception cref="InvalidClassImplementationException">Throws when the calling method's class was poorly written and missing LocalDbSetAttr attribute</exception>
 		public virtual List<T> GetFind(Func<T, bool> filter)
         {
             using (TContext context = (TContext)Activator.CreateInstance(typeof(TContext)))
             {
                 try
                 {
-                    foreach (var finfo in typeof(TContext).GetFields().Where(f => f.IsPublic && f.FieldType == typeof(DbSet<T>)))
+                    foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
                     {
                         return ((DbSet<T>)(finfo.GetValue(context))).Where(filter).ToList();
                     }
 
-                    return null; // Should be never hit if the context class is properly written
+                    throw new InvalidClassImplementationException("Calling method was written poorly, missing LocalDbSetAttr attribute!");
                 }
                 catch (ArgumentNullException)
                 {
@@ -78,7 +84,7 @@ namespace Bank_Business
         {
             using (TContext context = (TContext)Activator.CreateInstance(typeof(TContext)))
             {
-                foreach (var finfo in typeof(TContext).GetFields().Where(f => f.IsPublic && f.FieldType == typeof(DbSet<T>)))
+                foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
                 {
                     ((DbSet<T>)(finfo.GetValue(context))).Add(obj);
                 }
@@ -94,7 +100,7 @@ namespace Bank_Business
 		{
 			using (TContext context = (TContext)Activator.CreateInstance(typeof(TContext)))
 			{
-				foreach (var finfo in typeof(TContext).GetFields().Where(f => f.IsPublic && f.FieldType == typeof(DbSet<T>)))
+				foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
 				{
 					T target = ((DbSet<T>)(finfo.GetValue(context))).Single(e => (int)typeof(T).GetField("Id").GetValue(e) == (int)typeof(T).GetField("Id").GetValue(obj));
 
@@ -115,7 +121,7 @@ namespace Bank_Business
 		{
 			using (TContext context = (TContext)Activator.CreateInstance(typeof(TContext)))
 			{
-				foreach (var finfo in typeof(TContext).GetFields().Where(f => f.IsPublic && f.FieldType == typeof(DbSet<T>)))
+				foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
 				{
 					T target = ((DbSet<T>)(finfo.GetValue(context))).Single(e => (int)typeof(T).GetField("Id").GetValue(e) == id);
 
@@ -128,22 +134,39 @@ namespace Bank_Business
 			}
 		}
 
+
 		/// <summary>
 		/// Deletes objects in bulk that apply to the specified <b>filter</b>
 		/// </summary>
 		/// <param name="filter">Filter to use</param>
+		/// <exception cref="System.Data.Entity.Infrastructure.DbUpdateException">Throwed when the data you are trying to delete has some other data linked to it, delete that other data first</exception>
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "SecurityIntelliSenseCS:MS Security rules violation", Justification = "<Pending>")]
 		public virtual void DeleteBulk(Func<T, bool> filter)
 		{
 			using (TContext context = (TContext)Activator.CreateInstance(typeof(TContext)))
 			{
-				foreach (var finfo in typeof(TContext).GetFields().Where(f => f.IsPublic && f.FieldType == typeof(DbSet<T>)))
+				foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
 				{
 					List<T> targets = GetFind(filter);
+
+					if (((DbSet<T>)(finfo.GetValue(context))).Count() == targets.Count)
+					{
+						try
+						{
+							string tableName = finfo.Name[1].ToString().ToUpper() + finfo.Name.Remove(0, 2);
+							// Every entry was deleted, its safe to reset the id counter
+							context.Database.ExecuteSqlCommand($"DBCC CHECKIDENT ('dbo.{tableName}', RESEED, 0)");
+						} catch (Exception)
+						{
+							// Ignore if table doesn't exist because naming convention of dbset property is wrong
+						}
+					}
 
 					if (targets != null)
 					{
 						foreach (T target in targets)
 						{
+							((DbSet<T>)(finfo.GetValue(context))).Attach(target);
 							((DbSet<T>)(finfo.GetValue(context))).Remove(target);
 						}
 
