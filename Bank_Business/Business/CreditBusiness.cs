@@ -6,10 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bank_Business
+namespace Bank_Business.Business
 {
-    public class UserBusiness : BaseBusiness<User, UserContext>
+    public class CreditBusiness : BaseBusiness<Credit, CreditContext>
     {
-		
-	}
+    }
 }

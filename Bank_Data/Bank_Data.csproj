@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\LocalDbSetAttr.cs" />
+    <Compile Include="Context\AccountContext.cs" />
     <Compile Include="Context\AddressContext.cs" />
     <Compile Include="Context\UserContext.cs" />
+    <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\User.cs" />

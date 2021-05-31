@@ -51,10 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddressBusiness.cs" />
-    <Compile Include="BaseBusiness.cs" />
+    <Compile Include="Business\AddressBusiness.cs" />
+    <Compile Include="Business\BaseBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserBusiness.cs" />
+    <Compile Include="Business\UserBusiness.cs" />
     <Compile Include="Exceptions\InvalidClassImplementationException.cs" />
   </ItemGroup>
   <ItemGroup>

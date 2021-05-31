@@ -44,8 +44,16 @@ namespace Bank
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			usrb.DeleteBulk(x => true);
-			adrb.DeleteBulk(x => true);
+			try
+			{
+				usrb.DeleteBulk(x => true);
+			}
+			catch (Exception) { }
+			try
+			{
+				adrb.DeleteBulk(x => true);
+			}
+			catch (Exception) { }
 		}
 	}
 }

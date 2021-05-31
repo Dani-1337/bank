@@ -10,6 +10,5 @@ namespace Bank_Business
 {
 	public class AddressBusiness : BaseBusiness<Address, AddressContext>
 	{
-		
 	}
 }
