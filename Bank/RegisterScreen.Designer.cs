@@ -55,6 +55,7 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -274,28 +275,37 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(573, 326);
+            this.checkBox1.Location = new System.Drawing.Point(552, 345);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(44, 17);
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 30;
-            this.checkBox1.Text = "Tos";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(573, 346);
+            this.linkLabel1.Location = new System.Drawing.Point(568, 345);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(36, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(25, 13);
             this.linkLabel1.TabIndex = 31;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forum";
+            this.linkLabel1.Text = "Tos";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(661, 377);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 36);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Register";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // RegisterScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox12);
@@ -360,5 +370,6 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button1;
     }
 }

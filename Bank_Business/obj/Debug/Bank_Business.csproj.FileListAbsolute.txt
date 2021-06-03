@@ -28,3 +28,18 @@ C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Business\bin\Debug\Bank_Data.d
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Business\bin\Debug\EntityFramework.xml
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Business\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Business\obj\Debug\Bank_Business.csproj.CopyComplete
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\Bank_Business.dll.config
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\Bank_Business.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\Bank_Business.pdb
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\Bank_Data.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\EntityFramework.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\Bank_Data.pdb
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\Bank_Data.dll.config
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\EntityFramework.xml
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\obj\Debug\Bank_Business.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\obj\Debug\Bank_Business.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\obj\Debug\Bank_Business.csproj.CopyComplete
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\obj\Debug\Bank_Business.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Business\obj\Debug\Bank_Business.pdb

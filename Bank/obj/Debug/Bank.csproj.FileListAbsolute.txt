@@ -42,3 +42,27 @@ C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Data.pdb
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Data.dll.config
 D:\Desktop\BankProject\Bank\obj\Debug\Bank.LoginScreen.resources
 D:\Desktop\BankProject\Bank\obj\Debug\Bank.RegisterScreen.resources
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank.exe.config
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank.exe
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank.pdb
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank_Business.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank_Data.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\EntityFramework.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank_Business.pdb
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank_Business.dll.config
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank_Data.pdb
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\Bank_Data.dll.config
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\EntityFramework.xml
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.Form1.resources
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.LoginScreen.resources
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.Properties.Resources.resources
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.RegisterScreen.resources
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.TransferScreen.resources
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.csproj.GenerateResource.cache
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.csproj.CopyComplete
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.exe
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.pdb

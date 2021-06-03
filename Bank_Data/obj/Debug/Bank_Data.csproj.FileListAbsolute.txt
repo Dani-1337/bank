@@ -22,3 +22,15 @@ C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.cspro
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.csproj.CopyComplete
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.dll
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank_Data\obj\Debug\Bank_Data.pdb
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\bin\Debug\Bank_Data.dll.config
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\bin\Debug\Bank_Data.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\bin\Debug\Bank_Data.pdb
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\bin\Debug\EntityFramework.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\bin\Debug\EntityFramework.xml
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\obj\Debug\Bank_Data.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\obj\Debug\Bank_Data.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\obj\Debug\Bank_Data.csproj.CopyComplete
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\obj\Debug\Bank_Data.dll
+C:\Users\Student\Desktop\Mitich here\bankataaa\Bank_Data\obj\Debug\Bank_Data.pdb
