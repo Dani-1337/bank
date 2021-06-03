@@ -40,3 +40,5 @@ C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Business.pdb
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Business.dll.config
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Data.pdb
 C:\Users\XXTURNER.KK15-PC2\source\repos\Bank\Bank\bin\Debug\Bank_Data.dll.config
+D:\Desktop\BankProject\Bank\obj\Debug\Bank.LoginScreen.resources
+D:\Desktop\BankProject\Bank\obj\Debug\Bank.RegisterScreen.resources

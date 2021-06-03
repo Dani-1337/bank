@@ -12,7 +12,7 @@ namespace Bank_Data.Context
     public class HistoryContext : DbContext
     {
         [LocalDbSetAttr]
-        public DbSet<History> _histories { get; set; }
+        public DbSet<List<History>> _histories { get; set; }
 
         public HistoryContext() : base("Data Source=.;Initial Catalog=Bank;Integrated Security=True")
         {

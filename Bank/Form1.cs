@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bank_Data.Context;
 using Bank_Business;
+using Bank_Business.Business;
 
 namespace Bank
 {
@@ -22,6 +23,10 @@ namespace Bank
 		}
 		AddressBusiness adrb = new AddressBusiness();
 		UserBusiness usrb = new UserBusiness();
+		AccountBusiness a = new AccountBusiness();
+		BalanceBusiness b = new BalanceBusiness();
+		CreditBusiness c = new CreditBusiness();
+		HistoryBusiness d = new HistoryBusiness();
 		private void button1_Click(object sender, EventArgs e)
 		{
 			var random = new Random();
@@ -32,7 +37,28 @@ namespace Bank
 			adr.Country = "palatka #" + random.Next(0, 1000).ToString();
 			adr.Floor = random.Next(0, 10);
 
+			User usr = new User();
+			usr.Address = adr;
+			usr.Age = 23;
+			usr.Gender = Gender.Male;
+			usr.LastName = "asd";
+			usr.Name = "hgf";
+
+			Balance bal = new Balance();
+			bal.Credits = null;
+			bal.Histories = null;
+			bal.MainBalance = 213;
+
+			Account acc = new Account();
+			acc.Balance = bal;
+			acc.Email = "sg";
+			acc.Password = "hgt";
+			acc.User = usr;
+
+			usrb.Add(usr);
 			adrb.Add(adr);
+			b.Add(bal);
+			a.Add(acc);
 		}
 
 		private void button2_Click(object sender, EventArgs e)

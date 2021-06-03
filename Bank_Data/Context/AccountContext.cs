@@ -11,8 +11,8 @@ namespace Bank_Data.Context
 {
     public class AccountContext : DbContext
     {
-        [LocalDbSetAttr]
         public DbSet<Account> _accounts { get; set; }
+        public DbSet<Balance> _balances { get; set; }
 
         public AccountContext() : base("Data Source=.;Initial Catalog=Bank;Integrated Security=True")
         {

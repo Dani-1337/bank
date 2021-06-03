@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Bank_Data.Context;
 using Bank_Data.Model;
 
-namespace Bank_Business
+namespace Bank_Business.Business
 {
 	public class AddressBusiness : BaseBusiness<Address, AddressContext>
 	{

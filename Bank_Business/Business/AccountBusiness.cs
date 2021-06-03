@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Business.Business
 {
-    class AccountBusiness : BaseBusiness<Account, AccountContext>
+    public class AccountBusiness : BaseBusiness<Account, AccountContext>
     {
     }
 }

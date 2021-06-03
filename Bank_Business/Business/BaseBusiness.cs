@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bank_Business
+namespace Bank_Business.Business
 {
     public class BaseBusiness<T, TContext> where TContext : DbContext where T : class
     {
@@ -87,7 +87,7 @@ namespace Bank_Business
                 foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
                 {
                     ((DbSet<T>)(finfo.GetValue(context))).Add(obj);
-                }
+				}
                 context.SaveChanges();
             }
         }

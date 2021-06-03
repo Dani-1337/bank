@@ -10,7 +10,7 @@ namespace Bank_Data.Model
     {
         public string Email { get; set; }
         public string Password { get; set; }
-        public Balance Balance_ { get; set; }
-        public User User_ { get; set; }
+        public Balance Balance { get; set; }
+        public User User { get; set; }
     }
 }
