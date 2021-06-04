@@ -61,7 +61,6 @@
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Balance.cs" />
-    <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\Credit.cs" />
     <Compile Include="Model\History.cs" />
     <Compile Include="Model\User.cs" />

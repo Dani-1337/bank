@@ -10,6 +10,37 @@ namespace Bank_Business.Business
 {
 	public class UserBusiness : BaseBusiness<User, UserContext>
 	{
+		public override List<User> GetAll()
+		{
+			using (UserContext context = new UserContext())
+			{
+				return context._users.Include("Address").ToList();
+			}
+		}
+
+		public override User GetId(int id)
+		{
+			using (UserContext context = new UserContext())
+			{
+				return context._users.Include("Address").Single(e => e.Id == id);
+			}
+		}
+
+		public override List<User> GetFind(Func<User, bool> filter)
+		{
+			using (UserContext context = new UserContext())
+			{
+				try
+				{
+					return context._users.Include("Address").Where(filter).ToList();
+				}
+				catch (ArgumentNullException)
+				{
+					return null;
+				}
+			}
+		}
+
 		public override void Add(User obj)
 		{
 			using (UserContext context = new UserContext())
@@ -24,14 +55,14 @@ namespace Bank_Business.Business
 		{
 			using (UserContext context = new UserContext())
 			{
-				User target = context._users.Single(e => e.Id == obj.Id);
+				User target = context._users.Include("Address").Single(e => e.Id == obj.Id);
 				if (target != null)
 				{
 					context.Entry(target).CurrentValues.SetValues(obj);
 				}
 
 				Address target2 = context._addresses.Single(e => e.Id == obj.Address.Id);
-				if (target != null)
+				if (target2 != null)
 				{
 					context.Entry(target2).CurrentValues.SetValues(obj);
 				}
@@ -44,7 +75,7 @@ namespace Bank_Business.Business
 		{
 			using (UserContext context = new UserContext())
 			{
-				User target = context._users.Single(e => e.Id == id);
+				User target = context._users.Include("Address").Single(e => e.Id == id);
 				if (target != null)
 				{
 					Address target2 = context._addresses.Single(e => e.Id == target.Address.Id);

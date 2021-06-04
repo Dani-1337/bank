@@ -11,8 +11,9 @@ namespace Bank_Data.Context
 {
     public class CreditContext : DbContext
     {
-        public DbSet<List<Credit>> _credits { get; set; }
-        public DbSet<List<History>> _histories { get; set; }
+        [LocalDbSetAttr]
+        public DbSet<Credit> _credits { get; set; }
+        public DbSet<History> _histories { get; set; }
 
         public CreditContext() : base("Data Source=.;Initial Catalog=Bank;Integrated Security=True")
         {

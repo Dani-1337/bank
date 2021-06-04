@@ -8,6 +8,7 @@ namespace Bank_Data.Model
 {
     public class Credit : BaseModel
     {
+        public int ParentId { get; set; }
         public double CreditTaken { get; set; }
         public double CreditLeft { get; set; }
         public DateTime CreateDate { get; set; }

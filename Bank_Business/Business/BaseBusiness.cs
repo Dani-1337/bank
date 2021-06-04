@@ -23,8 +23,8 @@ namespace Bank_Business.Business
             using (TContext context = (TContext)Activator.CreateInstance(typeof(TContext)))
             {
 				foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
-                {
-                    return ((DbSet<T>)(finfo.GetValue(context))).ToList();
+				{
+					return ((DbSet<T>)(finfo.GetValue(context))).ToList();
                 }
 
 				throw new InvalidClassImplementationException("Calling method was written poorly, missing LocalDbSetAttr attribute!");
@@ -148,19 +148,6 @@ namespace Bank_Business.Business
 				foreach (var finfo in typeof(TContext).GetProperties().Where(f => f.CustomAttributes.Where(attr => attr.AttributeType == typeof(LocalDbSetAttr)).ToArray().Length > 0 && f.PropertyType == typeof(DbSet<T>)))
 				{
 					List<T> targets = GetFind(filter);
-
-					if (((DbSet<T>)(finfo.GetValue(context))).Count() == targets.Count)
-					{
-						try
-						{
-							string tableName = finfo.Name[1].ToString().ToUpper() + finfo.Name.Remove(0, 2);
-							// Every entry was deleted, its safe to reset the id counter
-							context.Database.ExecuteSqlCommand($"DBCC CHECKIDENT ('dbo.{tableName}', RESEED, 0)");
-						} catch (Exception)
-						{
-							// Ignore if table doesn't exist because naming convention of dbset property is wrong
-						}
-					}
 
 					if (targets != null)
 					{

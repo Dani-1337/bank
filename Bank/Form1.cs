@@ -18,15 +18,17 @@ namespace Bank
 	{
 		public Form1()
 		{
+			xx = new CreditBusiness();
+
 			InitializeComponent();
+
+			button1.Name = "Add random to DB";
+			button2.Name = "Read from DB";
+			button3.Name = "Delete ALL from DB";
+
 			button2_Click(null, null);
 		}
-		AddressBusiness adrb = new AddressBusiness();
-		UserBusiness usrb = new UserBusiness();
-		AccountBusiness a = new AccountBusiness();
-		BalanceBusiness b = new BalanceBusiness();
-		CreditBusiness c = new CreditBusiness();
-		HistoryBusiness d = new HistoryBusiness();
+		CreditBusiness xx;
 		private void button1_Click(object sender, EventArgs e)
 		{
 			var random = new Random();
@@ -55,29 +57,34 @@ namespace Bank
 			acc.Password = "hgt";
 			acc.User = usr;
 
-			usrb.Add(usr);
-			adrb.Add(adr);
-			b.Add(bal);
-			a.Add(acc);
+
+			List<History> hs = new List<History>();
+			History hs1 = new History();
+			History hs2 = new History();
+			hs1.Date = DateTime.Now;
+			hs1.Value = 213;
+			hs2.Date = DateTime.Now;
+			hs2.Value = 21323;
+			hs.Add(hs1);
+			hs.Add(hs2);
+			Credit c1 = new Credit();
+			c1.CreateDate = DateTime.Now;
+			c1.CreditLeft = 213;
+			c1.CreditTaken = 2135;
+			c1.Histories = hs;
+
+			xx.Add(c1);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			var a = adrb.GetAll();
-			var b = a.Select(ex => $"{ex.Id} - {ex.Block} {ex.Street} {ex.Neighborhood} {ex.Country} {ex.Floor}");
-			label1.Text = string.Join("\n", b);
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
 			try
 			{
-				usrb.DeleteBulk(x => true);
-			}
-			catch (Exception) { }
-			try
-			{
-				adrb.DeleteBulk(x => true);
+				xx.DeleteBulk(x => true);
 			}
 			catch (Exception) { }
 		}

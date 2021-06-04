@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Data.Model
 {
-    public class Balance : BaseModel
+	public class Balance : BaseModel
     {
         public double MainBalance { get; set; }
         public List<History> Histories { get; set; }

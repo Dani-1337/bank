@@ -11,6 +11,7 @@ namespace Bank_Data.Context
 {
     public class BalanceContext : DbContext
     {
+        [LocalDbSetAttr]
         public DbSet<Balance> _balances { get; set; }
         public DbSet<List<Credit>> _credits { get; set; }
         public DbSet<List<History>> _histories { get; set; }

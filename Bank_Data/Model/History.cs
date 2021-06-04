@@ -8,7 +8,8 @@ namespace Bank_Data.Model
 {
     public class History : BaseModel
     {
-        public double Value { get; set; }
+        public int ParentId { get; set; }
+		public double Value { get; set; }
         public DateTime Date { get; set; }
         public Account To { get; set; }
         public Account From { get; set; }

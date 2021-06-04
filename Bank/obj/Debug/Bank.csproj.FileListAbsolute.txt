@@ -66,3 +66,4 @@ C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.csproj.CoreCo
 C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.csproj.CopyComplete
 C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.exe
 C:\Users\Student\Desktop\Mitich here\bankataaa\Bank\obj\Debug\Bank.pdb
+D:\Desktop\BankProject\Bank\obj\Debug\Bank.TransferScreen.resources
